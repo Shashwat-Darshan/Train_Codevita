@@ -4,21 +4,22 @@
 
 ### Two Pointers
 
-- [ ] Used for problems involving searching, sorting, or subarrays (e.g., finding pairs with a given sum, merging sorted arrays).
+- [x] Used for problems involving searching, sorting, or subarrays (e.g., finding pairs with a given sum, merging sorted arrays).
   - **Worst Case Time Complexity**: O(n)
   - **When to Use**: When you need to process elements in a linear fashion with two indices.
 
 ### Three Pointers
 
-- [ ] Typically used in problems involving multiple sorted arrays or partitioning problems.
+- [x] Typically used in problems involving multiple sorted arrays or partitioning problems.
   - **Worst Case Time Complexity**: O(n)
   - **When to Use**: When dealing with multiple sorted arrays or partitioning problems.
 
 ### Sliding Window
 
-- [ ] Effective for solving problems related to subarrays or substrings (e.g., finding the maximum sum of subarray of size k, or the smallest subarray with a given sum).
+- [x] Effective for solving problems related to subarrays or substrings (e.g., finding the maximum sum of subarray of size k, or the smallest subarray with a given sum).
   - **Worst Case Time Complexity**: O(n)
   - **When to Use**: When you need to find or optimize a subarray or substring within a given array or string.
+  - [x] Kadane's Algorithm
 
 ## Greedy Algorithms
 
@@ -38,22 +39,109 @@
   - **Worst Case Time Complexity**: O(n log n)
   - **When to Use**: When you need to merge overlapping intervals efficiently.
 
+## Advanced Algorithms and Techniques
+
+### Advanced Graph Algorithms
+
+- [ ] Tarjan's Algorithm (for finding strongly connected components).
+  - **Worst Case Time Complexity**: O(V + E)
+  - **When to Use**: When you need to find all strongly connected components in a directed graph.
+- [ ] Floyd-Warshall Algorithm (for all-pairs shortest paths).
+  - **Worst Case Time Complexity**: O(V^3)
+  - **When to Use**: When you need to find shortest paths between all pairs of vertices in a weighted graph.
+- [ ] Johnson's Algorithm (for all-pairs shortest paths in sparse graphs).
+  - **Worst Case Time Complexity**: O(V^2 log V + VE)
+  - **When to Use**: When you need to find shortest paths between all pairs of vertices in a sparse graph.
+
+### Geometric Algorithms
+
+- [ ] Convex Hull.
+  - **Worst Case Time Complexity**: O(n log n)
+  - **When to Use**: When you need to find the smallest convex polygon that can contain all given points.
+- [ ] Line Intersection.
+  - **Worst Case Time Complexity**: O(n log n)
+  - **When to Use**: When you need to find all intersections between a set of lines.
+- [ ] Closest Pair of Points.
+  - **Worst Case Time Complexity**: O(n log n)
+  - **When to Use**: When you need to find the closest pair of points in a set.
+- [ ] Voronoi Diagrams.
+  - **Worst Case Time Complexity**: O(n log n)
+  - **When to Use**: When you need to partition a plane into regions based on distance to a set of points.
+- [ ] Delaunay Triangulation.
+  - **Worst Case Time Complexity**: O(n log n)
+  - **When to Use**: When you need to triangulate a set of points such that no point is inside the circumcircle of any triangle.
+
+### Numerical Algorithms
+
+- [ ] Fast Fourier Transform (FFT).
+  - **Worst Case Time Complexity**: O(n log n)
+  - **When to Use**: When you need to compute the discrete Fourier transform of a sequence.
+- [ ] Karatsuba Algorithm (for fast multiplication).
+  - **Worst Case Time Complexity**: O(n^log3)
+  - **When to Use**: When you need to multiply large numbers more efficiently than the standard algorithm.
+- [ ] Newton's Method (for finding roots).
+  - **Worst Case Time Complexity**: O(log n)
+  - **When to Use**: When you need to find successively better approximations to the roots of a real-valued function.
+
+### Optimization Algorithms
+
+- [ ] Simulated Annealing.
+  - **Worst Case Time Complexity**: Problem-dependent
+  - **When to Use**: When you need a probabilistic technique for approximating the global optimum of a given function.
+- [ ] Genetic Algorithms.
+  - **Worst Case Time Complexity**: Problem-dependent
+  - **When to Use**: When you need a search heuristic that mimics the process of natural selection.
+- [ ] Linear Programming (Simplex Algorithm).
+  - **Worst Case Time Complexity**: Exponential in the worst case, but polynomial on average
+  - **When to Use**: When you need to optimize a linear objective function subject to linear equality and inequality constraints.
+- [ ] Integer Programming.
+  - **Worst Case Time Complexity**: NP-hard
+  - **When to Use**: When you need to solve optimization problems where some or all variables are restricted to be integers.
+
+### Probabilistic and Approximation Algorithms
+
+- [ ] Monte Carlo Algorithms.
+  - **Worst Case Time Complexity**: Problem-dependent
+  - **When to Use**: When you need a randomized algorithm whose output may be incorrect with a certain probability.
+- [ ] Las Vegas Algorithms.
+  - **Worst Case Time Complexity**: Problem-dependent
+  - **When to Use**: When you need a randomized algorithm that always produces the correct result, with a variable runtime.
+- [ ] Approximation Algorithms for NP-Hard Problems.
+  - **Worst Case Time Complexity**: Problem-dependent
+  - **When to Use**: When you need to find approximate solutions to NP-hard problems within a guaranteed bound.
+
+### Parallel and Distributed Algorithms
+
+- [ ] MapReduce.
+  - **Worst Case Time Complexity**: Problem-dependent
+  - **When to Use**: When you need a programming model for processing large data sets with a distributed algorithm on a cluster.
+- [ ] Parallel Sorting Algorithms (e.g., Bitonic Sort).
+  - **Worst Case Time Complexity**: O(log^2 n)
+  - **When to Use**: When you need to sort data in parallel.
+- [ ] Distributed Consensus Algorithms (e.g., Paxos, Raft).
+  - **Worst Case Time Complexity**: Problem-dependent
+  - **When to Use**: When you need to achieve consensus among distributed processes or systems.
+
 ## Dynamic Programming (DP)
 
 - [ ] **Knapsack Variants**: 0/1, fractional, unbounded.
-  - **Worst Case Time Complexity**: O(nW) for 0/1 knapsack
+  - **Worst Case Time Complexity**: O(nW/2^n) using meet-in-the-middle for 0/1 knapsack.
   - **When to Use**: When you need to solve optimization problems with overlapping subproblems.
+
 - [ ] **Subsequence/Subarray Problems**: Longest Increasing Subsequence, Longest Common Subsequence, Maximum Subarray Sum.
-  - **Worst Case Time Complexity**: O(n^2) for LCS
+  - **Worst Case Time Complexity**: O(n log n) using segment tree for LCS.
   - **When to Use**: When you need to find the optimal subsequence or subarray.
+
 - [ ] **Matrix DP**: Problems like grid traversal, pathfinding, or matrix chain multiplication.
-  - **Worst Case Time Complexity**: O(n^3) for matrix chain multiplication
+  - **Worst Case Time Complexity**: O(n^2.81) using Strassen's algorithm for matrix multiplication.
   - **When to Use**: When you need to solve problems involving grids or matrices.
+
 - [ ] **Bitmask DP**: Used for problems with state representation via bits (e.g., Traveling Salesman Problem).
-  - **Worst Case Time Complexity**: O(2^n * n)
+  - **Worst Case Time Complexity**: O(2^n * n/w) using bit manipulation, where w is the word size.
   - **When to Use**: When you need to solve problems with a large number of states.
+
 - [ ] **DP with Optimizations**: Divide and Conquer Optimization, Slope Optimization.
-  - **Worst Case Time Complexity**: Varies
+  - **Worst Case Time Complexity**: Varies.
   - **When to Use**: When you need to optimize the time complexity of standard DP solutions.
 
 ## Graph Algorithms
@@ -126,6 +214,25 @@
 
 ## String Algorithms
 
+### String Manipulation
+
+- [ ] Used for problems involving operations on strings.
+  - **Worst Case Time Complexity**: O(n) for traversal, O(n^2) for concatenation
+  - **When to Use**: When you need to perform operations like searching, concatenation, and modification of strings.
+
+
+### Algo Based
+
+- [ ] Aho-Corasick Algorithm (for multiple pattern matching).
+  - **Worst Case Time Complexity**: O(n + m + z)
+  - **When to Use**: When you need to find all occurrences of multiple patterns in a text.
+- [ ] Z Algorithm (for pattern matching).
+  - **Worst Case Time Complexity**: O(n + m)
+  - **When to Use**: When you need to find all occurrences of a pattern in a text.
+- [ ] Manacher's Algorithm (for finding the longest palindromic substring).
+  - **Worst Case Time Complexity**: O(n)
+  - **When to Use**: When you need to find the longest palindromic substring in linear time.
+
 ### Pattern Matching
 
 - [ ] Knuth-Morris-Pratt (KMP)
@@ -138,7 +245,7 @@
   - **Worst Case Time Complexity**: O(n + m)
   - **When to Use**: When you need to find occurrences of a pattern in a text efficiently.
 
-### Suffix Array/Tree
+## Suffix Array/Tree
 
 - [ ] Used for substring problems, LCS, etc.
   - **Worst Case Time Complexity**: O(n log n) for construction
@@ -155,12 +262,6 @@
 - [ ] For substring comparisons (e.g., finding repeated substrings).
   - **Worst Case Time Complexity**: O(n)
   - **When to Use**: When you need to compare substrings efficiently using hashing.
-
-## String Manipulation
-
-- [ ] Used for problems involving operations on strings.
-  - **Worst Case Time Complexity**: O(n) for traversal, O(n^2) for concatenation
-  - **When to Use**: When you need to perform operations like searching, concatenation, and modification of strings.
 
 ## Mathematics and Number Theory
 
@@ -309,12 +410,12 @@
 - [ ] XOR tricks.
   - **Worst Case Time Complexity**: O(1) per operation
   - **When to Use**: When you need to perform fast bitwise operations.
-- [ ] Subset generation using bits.
+- [ ] Subset generation using bits
   - **Worst Case Time Complexity**: O(2^n)
   - **When to Use**: When you need to generate subsets using bitwise operations.
 
 ### Meet-in-the-Middle
 
-- [ ] Efficiently solving problems with large constraints.
+- [x] Efficiently solving problems with large constraints.
   - **Worst Case Time Complexity**: O(2^(n/2))
   - **When to Use**: When you need to solve problems with large input sizes by dividing the problem into two smaller subproblems.
